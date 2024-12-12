@@ -1,7 +1,7 @@
 #!/bin/bash
 monthly_income = int(input("Enter your monthly income:"))
 monthly_expenses = int(input("Enter your total monthly expenses:"))
-savings = monthly_income - monthly_expenses
+monthly_savings = float(monthly_income - monthly_expenses)
 rate = 0.05
 annual_savings =  savings * 12
 projected_savings = annual_savings + (savings * 12 * rate)
