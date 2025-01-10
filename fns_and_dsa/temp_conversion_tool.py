@@ -2,20 +2,23 @@ FAHRENHEIT_TO_CELSIUS_FACTOR = 5/9
 CELSIUS_TO_FAHRENHEIT_FACTOR = 9/5
 
 def convert_to_celsius(fahrenheit):
-    C = (fahrenheit - 32) * 5/9
+    C = (fahrenheit - 32) * FAHRENHEIT_TO_CELSIUS_FACTOR
     return C
 
 
 def convert_to_fahrenheit(celsius):
-    F = (celsius * 9/5) + 32
+    F = (celsius * CELSIUS_TO_FAHRENHEIT_FACTOR) + 32
     return F
+
+
 user = int(input("Enter the temperature to convert: "))
 cel_fah = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").lower()
 
 if cel_fah == "c":
-    print(f"{user}°c is {convert_to_fahrenheit(user)}°F")
+    converted_to_fah = convert_to_fahrenheit(user)
+    print(f"{user}°c is {converted_to_fah}°F")
 elif cel_fah == "f":
-    convert_to_celsius(user)
-    print(f"{user}°F is {convert_to_celsius(user)}°C")
+    converted_cel = convert_to_celsius(user)
+    print(f"{user}°F is {converted_to_cel}°C")
 else:
     print("enter a correct answer")
