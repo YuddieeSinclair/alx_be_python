@@ -21,4 +21,4 @@ elif cel_fah == "f":
     converted_cel = convert_to_celsius(user)
     print(f"{user}°F is {converted_to_cel}°C")
 else:
-    print("enter a correct answer")
+    print("Invalid temperature. Please enter a numeric value.")
