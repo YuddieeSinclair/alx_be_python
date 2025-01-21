@@ -1,8 +1,8 @@
 def safe_divide(numerator, denominator):
     while True:
         try:
-            numerator = int(numerator)
-            denominator = int(denominator)
+            numerator = float(numerator)
+            denominator = float(denominator)
             numerator / denominator
         except ZeroDivisionError:
             return('Error: Cannot divide by zero.')
