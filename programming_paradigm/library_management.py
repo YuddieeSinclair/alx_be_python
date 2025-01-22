@@ -15,25 +15,25 @@ class Book:
 
 class Library:
     def __init__(self):
-        self.__books = []
+        self._books = []
 
 
     def add_book(self, book):
         if isinstance(book, Book):
-            self.__books.append(book)
+            self._books.append(book)
     
     def check_out_book(self, title):
-        for i in self.__books:
+        for i in self._books:
             if i.title == title:
                 i.check_book()
 
     def return_book(self, title):
-        for i in self.__books:
+        for i in self._books:
             if i.title == title:
                 i.return_book()
 
     def list_available_books(self):
-        for i in self.__books:
+        for i in self._books:
             if i._Book__is_checked_out == True:
                 break
             print(f"{i.title} by {i.author}")
